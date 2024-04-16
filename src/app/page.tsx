@@ -11,14 +11,26 @@ import "primeflex/primeflex.css";
 export default function Home() {
   const [value, setValue] = useState(3);
   const [budget, setBudget] = useState(100);
+  const [init, setInit] = useState(0);
   const isPlural = value > 1 ? "Años" : "Año";
   return (
     <main>
       <Card className="m-0 text-center" title="Veamos tu potencial">
         <div className="shadow-2 surface-card p-8 border-round flex justify-content-center">
-          <div className="flex justify-content-center">
-            <h3>Aportes</h3>
+          <div>
+            <label htmlFor="initDepo">Initial Deposit</label>
             <InputNumber
+              name="initDepo"
+              inputId="currency-us"
+              value={init}
+              onValueChange={(e) => setInit(e.value)}
+              mode="currency"
+            />
+          </div>
+          <div className="flex justify-content-center">
+            <label htmlFor="contr">Aportes</label>
+            <InputNumber
+              name="contr"
               inputId="currency-us"
               value={budget}
               onValueChange={(e) => setBudget(e.value)}
@@ -28,11 +40,12 @@ export default function Home() {
             />
           </div>
           <div className="flex justify-content-center">
-            <h3>Plazo de Inversión</h3>
-            <h4
+            <label htmlFor="growTime">Plazo de Inversión</label>
+            <p
               style={{ color: "var(--primary-color)" }}
-            >{`${value} ${isPlural}`}</h4>
+            >{`${value} ${isPlural}`}</p>
             <Slider
+              name="growTime"
               value={value}
               onChange={(e) => setValue(e.value)}
               className="p-slider p-slider-handle w-30rem"
