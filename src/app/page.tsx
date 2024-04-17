@@ -54,7 +54,7 @@ export default function Home() {
           />
           <RadioButton
             inputId="years"
-            name="contr"
+            name="contrib"
             value="Anual"
             onChange={(e) => setFrequency(e.value)}
             checked={frequency === "Anual"}
@@ -62,7 +62,7 @@ export default function Home() {
           <label htmlFor="years">Anual</label>
           <RadioButton
             inputId="months"
-            name="contr"
+            name="contrib"
             value="Mensual"
             onChange={(e) => setFrequency(e.value)}
             checked={frequency === "Mensual"}
@@ -70,7 +70,7 @@ export default function Home() {
           <label htmlFor="months">Mensual</label>
           <RadioButton
             inputId="weeks"
-            name="contr"
+            name="contrib"
             value="Semanal"
             onChange={(e) => setFrequency(e.value)}
             checked={frequency === "Semanal"}
@@ -78,7 +78,7 @@ export default function Home() {
           <label htmlFor="weeks">Semanal</label>
           <RadioButton
             inputId="days"
-            name="contr"
+            name="contrib"
             value="Diario"
             onChange={(e) => setFrequency(e.value)}
             checked={frequency === "Diario"}
@@ -94,7 +94,7 @@ export default function Home() {
             name="growTime"
             value={value}
             onChange={(e) => setValue(e.value)}
-            className="p-slider p-slider-handle w-30rem"
+            className="p-slider p-slider-handle w-20rem"
             min={1}
             max={40}
           />
