@@ -1,7 +1,13 @@
-#head {
+#mstr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.resultGraph {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -16,10 +22,32 @@ form {
 }
 
 Button {
+  width: 40%;
   background-color: rgb(47, 40, 224);
   color: rgb(255, 255, 255);
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
   border-bottom-left-radius: 22px;
   border-bottom-right-radius: 22px;
+}
+
+#initDepo,
+#contr,
+#percnt,
+label,
+#growTime {
+  margin: 5%;
+}
+
+#globalRoi {
+  text-decoration: dashed;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
 }

@@ -15,9 +15,14 @@ export default function Home() {
   const [term, setTerm] = useState(3);
   const [percent, setPercent] = useState(15);
   const isPlural = term > 1 ? "Años" : "Año";
+
+  function handleClick(e) {
+    e.preventDefault();
+  }
+
   return (
     <main>
-      <div id="head">
+      <div id="mstr">
         <h1>Veamos tu potencial</h1>
         <p>
           Aquí una muestra de cómo el tiempo y el interés compuesto pueden
@@ -28,9 +33,10 @@ export default function Home() {
         <form>
           <div>
             <label htmlFor="initDepo">Depósito Inicial</label>
+            <br />
             <InputNumber
               className="border-circle-top border-circle-bottom"
-              name="initDepo"
+              id="initDepo"
               inputId="currency-us"
               value={init}
               onValueChange={(e) => setInit(e.value)}
@@ -41,9 +47,10 @@ export default function Home() {
           </div>
           <div className="">
             <label htmlFor="contr">Aportes</label>
+            <br />
             <InputNumber
               className="keyIn"
-              name="contr"
+              id="contr"
               inputId="currency-us"
               value={budget}
               onValueChange={(e) => setBudget(e.value)}
@@ -51,38 +58,40 @@ export default function Home() {
               currency="USD"
               locale="es"
             />
-            <RadioButton
-              inputId="years"
-              name="contrib"
-              value="Anual"
-              onChange={(e) => setFrequency(e.value)}
-              checked={frequency === "Anual"}
-            />
-            <label htmlFor="years">Anual</label>
-            <RadioButton
-              inputId="months"
-              name="contrib"
-              value="Mensual"
-              onChange={(e) => setFrequency(e.value)}
-              checked={frequency === "Mensual"}
-            />
-            <label htmlFor="months">Mensual</label>
-            <RadioButton
-              inputId="weeks"
-              name="contrib"
-              value="Semanal"
-              onChange={(e) => setFrequency(e.value)}
-              checked={frequency === "Semanal"}
-            />
-            <label htmlFor="weeks">Semanal</label>
-            <RadioButton
-              inputId="days"
-              name="contrib"
-              value="Diario"
-              onChange={(e) => setFrequency(e.value)}
-              checked={frequency === "Diario"}
-            />
-            <label htmlFor="days">Diario</label>
+            <div className="radio">
+              <RadioButton
+                inputId="years"
+                name="contrib"
+                value="Anual"
+                onChange={(e) => setFrequency(e.value)}
+                checked={frequency === "Anual"}
+              />
+              <label htmlFor="years">Anual</label>
+              <RadioButton
+                inputId="months"
+                name="contrib"
+                value="Mensual"
+                onChange={(e) => setFrequency(e.value)}
+                checked={frequency === "Mensual"}
+              />
+              <label htmlFor="months">Mensual</label>
+              <RadioButton
+                inputId="weeks"
+                name="contrib"
+                value="Semanal"
+                onChange={(e) => setFrequency(e.value)}
+                checked={frequency === "Semanal"}
+              />
+              <label htmlFor="weeks">Semanal</label>
+              <RadioButton
+                inputId="days"
+                name="contrib"
+                value="Diario"
+                onChange={(e) => setFrequency(e.value)}
+                checked={frequency === "Diario"}
+              />
+              <label htmlFor="days">Diario</label>
+            </div>
           </div>
           <div className="">
             <label htmlFor="growTime">Plazo de Inversión</label>
@@ -98,22 +107,23 @@ export default function Home() {
           </div>
           <div>
             <label htmlFor="percnt">Retorno anual promedio</label>
+            <br />
             <InputNumber
-              className="keyIn"
-              name="percnt"
+              id="percnt"
               suffix="%"
               value={percent}
               onValueChange={(e) => setPercent(e.value)}
               mode="decimal"
               min={10}
               max={40}
-              unstyled
             />
           </div>
-          <Button label="Calcular mis rendimientos" />
+          <Button label="Calcular mis rendimientos" onClick={handleClick} />
         </form>
-        <div>
-          <h2>Graph will be here</h2>
+        <div className="resultGraph">
+          <label htmlFor="returnOfInv">Saldo potencial</label>
+          <h2 id="returnOfInv">Return Of Investment</h2>
+          <svg></svg>
         </div>
       </section>
     </main>
