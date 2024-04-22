@@ -1,26 +1,25 @@
-#head{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Calc {
-    display: grid;
-    grid-template-columns: 30% 70%;
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 Button {
-    background-color: rgb(47, 40, 224);
-    color: rgb(255, 255, 255);
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-    border-bottom-left-radius: 22px;
-    border-bottom-right-radius: 22px;
+  background-color: rgb(47, 40, 224);
+  color: rgb(255, 255, 255);
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
 }
