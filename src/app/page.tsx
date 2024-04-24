@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Frequency } from "./types.ts";
+import { Frequency } from "./types";
 import { Button } from "primereact/button";
 import { Slider } from "primereact/slider";
 import { InputNumber } from "primereact/inputnumber";
@@ -11,9 +11,9 @@ import "./calc.css";
 
 export default function Home() {
   const [initialDeposit, setInitialDeposit] = useState(1200);
-  const [contribution, setContribution] = useState(100);
+  const [contribution, setContribution] = useState(200);
   const [frequency, setFrequency] = useState<Frequency>("Mensual");
-  const [term, setTerm] = useState(3);
+  const [term, setTerm] = useState(5);
   const [percent, setPercent] = useState(15);
   const isPlural = term > 1 ? "Años" : "Año";
 
@@ -30,21 +30,20 @@ export default function Home() {
           ayudarte a hacer crecer tu dinero.
         </p>
       </div>
-      <section className="calc">
+      <section className="roi-calculus">
         <form>
           <div>
-            <label htmlFor="initDepo" className="spacing">
+            <label htmlFor="initial-deposit" className="spacing">
               Depósito Inicial
             </label>
             <br />
             <InputNumber
-              className="border-circle-top border-circle-bottom spacing rounded"
-              id="initDepo"
-              inputId="currency-us"
+              className="spacing"
+              id="initial-deposit"
               value={initialDeposit}
               onValueChange={(e) => setInitialDeposit(e.value)}
-              mode="currency"
-              currency="USD"
+              mode="decimal"
+              prefix="US$ "
               locale="es"
             />
           </div>
@@ -54,20 +53,18 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
-              style={{ borderRadius: "22px" }}
-              className="spacing rounded"
+              className="spacing"
               id="contributions"
-              inputId="currency-us"
               value={contribution}
               onValueChange={(e) => setContribution(e.value)}
-              mode="currency"
-              currency="USD"
+              mode="decimal"
+              prefix="US$ "
               locale="es"
             />
             <div className="radio">
               <RadioButton
                 inputId="years"
-                name="selectFrequency"
+                name="select-frequency"
                 value="Anual"
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Anual"}
@@ -77,7 +74,7 @@ export default function Home() {
               </label>
               <RadioButton
                 inputId="months"
-                name="selectFrequency"
+                name="select-frequency"
                 value="Mensual"
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Mensual"}
@@ -87,7 +84,7 @@ export default function Home() {
               </label>
               <RadioButton
                 inputId="weeks"
-                name="selectFrequency"
+                name="select-frequency"
                 value="Semanal"
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Semanal"}
@@ -97,7 +94,7 @@ export default function Home() {
               </label>
               <RadioButton
                 inputId="days"
-                name="selectFrequency"
+                name="select-frequency"
                 value="Diario"
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Diario"}
@@ -107,28 +104,25 @@ export default function Home() {
               </label>
             </div>
           </div>
-          <div>
-            <label htmlFor="growTime" className="spacing">
+          <div className="spacing2">
+            <label htmlFor="pay-term" className="spacing">
               Plazo de Inversión
             </label>
-            <p>{`${term} ${isPlural}`}</p>
+            <p className="spacing">{`${term} ${isPlural}`}</p>
             <Slider
-              className="spacing"
-              name="growTime"
+              name="pay-term"
               value={term}
               onChange={(e) => setTerm(e.value)}
-              className="p-slider p-slider-handle w-20rem"
+              className="p-slider p-slider-handle w-13rem spacing3"
               min={1}
               max={40}
             />
           </div>
           <div>
-            <label htmlFor="percent" className="spacing">
-              Retorno anual promedio
-            </label>
+            <label htmlFor="percent">Retorno anual promedio</label>
             <br />
             <InputNumber
-              className="spacing"
+              className="spacing3"
               id="percent"
               suffix="%"
               value={percent}
@@ -138,13 +132,17 @@ export default function Home() {
               max={40}
             />
           </div>
-          <Button label="Calcular mis rendimientos" onClick={handleClick} />
+          <Button
+            className="bouton spacing"
+            label="Calcular mis rendimientos"
+            onClick={handleClick}
+          />
         </form>
-        <div className="resultGraph">
-          <label htmlFor="returnOfInv" className="spacing">
+        <div className="result-graph">
+          <label htmlFor="return-of-investment" className="spacing">
             Saldo potencial
           </label>
-          <h2 id="returnOfInv">Return Of Investment</h2>
+          <h2 id="return-of-investment">Return Of Investment</h2>
           <svg></svg>
         </div>
       </section>
