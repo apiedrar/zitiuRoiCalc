@@ -19,16 +19,17 @@ form {
 }
 
 .spacing {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.radio-spacing {
   margin: 5%;
 }
 
 .spacing2 {
   margin-top: 5%;
   margin-bottom: 5%;
-}
-
-.spacing3 {
-  margin-top: 10%;
 }
 
 .radio {

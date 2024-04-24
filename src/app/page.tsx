@@ -69,7 +69,7 @@ export default function Home() {
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Anual"}
               />
-              <label htmlFor="years" className="spacing">
+              <label htmlFor="years" className="radio-spacing">
                 Anual
               </label>
               <RadioButton
@@ -79,7 +79,7 @@ export default function Home() {
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Mensual"}
               />
-              <label htmlFor="months" className="spacing">
+              <label htmlFor="months" className="radio-spacing">
                 Mensual
               </label>
               <RadioButton
@@ -89,7 +89,7 @@ export default function Home() {
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Semanal"}
               />
-              <label htmlFor="weeks" className="spacing">
+              <label htmlFor="weeks" className="radio-spacing">
                 Semanal
               </label>
               <RadioButton
@@ -99,7 +99,7 @@ export default function Home() {
                 onChange={(e) => setFrequency(e.value)}
                 checked={frequency === "Diario"}
               />
-              <label htmlFor="days" className="spacing">
+              <label htmlFor="days" className="radio-spacing">
                 Diario
               </label>
             </div>
@@ -122,7 +122,7 @@ export default function Home() {
             <label htmlFor="percent">Retorno anual promedio</label>
             <br />
             <InputNumber
-              className="spacing3"
+              className="spacing"
               id="percent"
               suffix="%"
               value={percent}
