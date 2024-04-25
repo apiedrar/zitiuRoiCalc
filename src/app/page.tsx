@@ -17,9 +17,8 @@ export default function Home() {
   const [percent, setPercent] = useState(15);
   const isPlural = term > 1 ? "Años" : "Año";
 
-  function handleClick(e) {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>
     e.preventDefault();
-  }
 
   return (
     <main>
@@ -31,7 +30,7 @@ export default function Home() {
         </p>
       </div>
       <section className="roi-calculus">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="initial-deposit" className="spacing">
               Depósito Inicial
@@ -135,7 +134,6 @@ export default function Home() {
           <Button
             className="bouton spacing"
             label="Calcular mis rendimientos"
-            onClick={handleClick}
           />
         </form>
         <div className="result-graph">
