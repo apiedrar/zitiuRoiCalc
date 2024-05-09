@@ -5,6 +5,7 @@ import { Button } from "primereact/button";
 import { Slider } from "primereact/slider";
 import { InputNumber } from "primereact/inputnumber";
 import { RadioButton } from "primereact/radiobutton";
+import { calculateInvestedAmount, quantifiedContributions } from "./utils.js";
 import "primereact/resources/themes/mira/theme.css";
 import "primeflex/primeflex.css";
 import "./calc.css";
@@ -17,8 +18,16 @@ export default function Home() {
   const [percent, setPercent] = useState(15);
   const isPlural = term > 1 ? "Años" : "Año";
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const investedAmount = calculateInvestedAmount(
+      initialDeposit,
+      contribution,
+      term
+    );
     e.preventDefault();
+    quantifiedContributions(frequency);
+    console.log(investedAmount);
+  };
 
   return (
     <main>
@@ -44,6 +53,8 @@ export default function Home() {
               mode="decimal"
               prefix="US$ "
               locale="es"
+              maxLength={14}
+              min={50}
             />
           </div>
           <div>
@@ -59,6 +70,8 @@ export default function Home() {
               mode="decimal"
               prefix="US$ "
               locale="es"
+              maxLength={10}
+              min={20}
             />
             <div className="radio">
               <RadioButton
@@ -127,7 +140,7 @@ export default function Home() {
               value={percent}
               onValueChange={(e) => setPercent(e.value)}
               mode="decimal"
-              min={10}
+              min={5}
               max={40}
             />
           </div>
