@@ -5,7 +5,7 @@ import { Button } from "primereact/button";
 import { Slider } from "primereact/slider";
 import { InputNumber } from "primereact/inputnumber";
 import { RadioButton } from "primereact/radiobutton";
-import { calculateInvestedAmount, quantifiedContributions } from "./utils.js";
+import { calculateInvestedAmount, quantifiedFrequency } from "./utils.js";
 import "primereact/resources/themes/mira/theme.css";
 import "primeflex/primeflex.css";
 import "./calc.css";
@@ -25,7 +25,7 @@ export default function Home() {
       term
     );
     e.preventDefault();
-    quantifiedContributions(frequency);
+    quantifiedFrequency(frequency);
     console.log(investedAmount);
   };
 

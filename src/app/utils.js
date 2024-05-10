@@ -1,4 +1,4 @@
-const quantifiedContributions = (frequency) => {
+const quantifiedFrequency = (frequency) => {
   if (frequency === "Diario") {
     return 365;
   } else if (frequency === "Semanal") {
@@ -10,8 +10,12 @@ const quantifiedContributions = (frequency) => {
   }
 };
 
-function calculateInvestedAmount(initialDeposit, contribution, term) {
-  return contribution * quantifiedContributions * term + initialDeposit;
+function calculateInvestedAmount(initialDeposit, contributionAmount, term) {
+  const annualContribution = contributionAmount * quantifiedFrequency;
+  return (
+    parseInt(contributionAmount) * quantifiedFrequency * parseInt(term) +
+    parseInt(initialDeposit)
+  );
 }
 
-export { quantifiedContributions, calculateInvestedAmount };
+export { quantifiedFrequency, calculateInvestedAmount };
