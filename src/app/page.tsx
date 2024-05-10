@@ -5,7 +5,11 @@ import { Button } from "primereact/button";
 import { Slider } from "primereact/slider";
 import { InputNumber } from "primereact/inputnumber";
 import { RadioButton } from "primereact/radiobutton";
-import { calculateInvestedAmount, quantifiedFrequency } from "./utils.js";
+import {
+  calculateInvestedAmountArray,
+  quantifiedFrequency,
+  calculateReturnsArray,
+} from "./utils.js";
 import "primereact/resources/themes/mira/theme.css";
 import "primeflex/primeflex.css";
 import "./calc.css";
@@ -19,11 +23,18 @@ export default function Home() {
   const isPlural = term > 1 ? "Años" : "Año";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const investedAmount = calculateInvestedAmount(
+    const investedAmount = calculateInvestedAmountArray(
       initialDeposit,
       contribution,
       term
     );
+    const returnAmount = calculateReturnsArray(
+      initialDeposit,
+      contribution,
+      term,
+      percent
+    );
+
     e.preventDefault();
     quantifiedFrequency(frequency);
     console.log(investedAmount);
