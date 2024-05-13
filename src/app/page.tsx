@@ -37,6 +37,9 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
+              inputStyle={{
+                borderRadius: "22px",
+              }}
               className="spacing"
               id="initial-deposit"
               value={initialDeposit}
@@ -52,6 +55,9 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
+              inputStyle={{
+                borderRadius: "22px",
+              }}
               className="spacing"
               id="contributions"
               value={contribution}
@@ -121,6 +127,9 @@ export default function Home() {
             <label htmlFor="percent">Retorno anual promedio</label>
             <br />
             <InputNumber
+              inputStyle={{
+                borderRadius: "22px",
+              }}
               className="spacing"
               id="percent"
               suffix="%"
@@ -137,11 +146,13 @@ export default function Home() {
           />
         </form>
         <div className="result-graph">
-          <label htmlFor="return-of-investment" className="spacing">
+          <label htmlFor="return-of-investment" style={{ margin: "4.25%" }}>
             Saldo potencial
           </label>
-          <h2 id="return-of-investment">Return Of Investment</h2>
-          <svg></svg>
+          <h2 style={{ marginBottom: "2.5%" }} id="return-of-investment">
+            RetoLno de InveLsion de Yonkeibel
+          </h2>
+          <div className="graph"></div>
         </div>
       </section>
     </main>

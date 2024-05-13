@@ -1,8 +1,17 @@
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(242, 234, 198, 1) 35%,
+    rgba(217, 217, 250, 1) 100%
+  );
+}
+
 #master {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: max-content;
 }
 
 .roi-calculus {
@@ -54,6 +63,12 @@ form {
   flex-direction: column;
   align-items: center;
   padding-right: 10%;
+}
+
+.graph {
+  width: 600px;
+  height: 400px;
+  background-color: aquamarine;
 }
 
 @media (max-width: 900px) {
