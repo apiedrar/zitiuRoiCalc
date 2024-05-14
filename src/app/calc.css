@@ -4,6 +4,7 @@ body {
     rgba(242, 234, 198, 1) 35%,
     rgba(217, 217, 250, 1) 100%
   );
+  min-height: 100vh;
 }
 
 #master {
