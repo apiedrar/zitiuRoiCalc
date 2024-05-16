@@ -80,9 +80,14 @@ form {
   }
   form {
     padding-left: none;
+    padding: 10%;
   }
   .result-graph {
     margin-top: 10%;
-    padding-right: none;
+    padding: 5%;
+  }
+  .graph {
+    min-width: 90%;
+    min-height: 80%;
   }
 }
