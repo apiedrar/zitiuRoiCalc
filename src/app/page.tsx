@@ -15,31 +15,24 @@ export default function Home() {
   const [frequency, setFrequency] = useState<Frequency>("Mensual");
   const [term, setTerm] = useState(5);
   const [percent, setPercent] = useState(15);
-  const isPlural = term > 1 ? "Años" : "Año";
+  const isPlural = term > 1 ? "años" : "año";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>
     e.preventDefault();
 
   return (
     <main>
-      <div id="master">
-        <h1>Veamos tu potencial</h1>
-        <p>
-          Aquí una muestra de cómo el tiempo y el interés compuesto pueden
-          ayudarte a hacer crecer tu dinero.
-        </p>
-      </div>
       <section className="roi-calculus">
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="initial-deposit" className="spacing">
-              Depósito Inicial
+            <label
+              htmlFor="initial-deposit"
+              className="spacing toplabel-styles"
+            >
+              DEPÓSITO INICIAL
             </label>
             <br />
             <InputNumber
-              inputStyle={{
-                borderRadius: "22px",
-              }}
               className="spacing"
               id="initial-deposit"
               value={initialDeposit}
@@ -50,14 +43,11 @@ export default function Home() {
             />
           </div>
           <div>
-            <label htmlFor="contributions" className="spacing">
-              Aportes
+            <label htmlFor="contributions" className="spacing toplabel-styles">
+              APORTES
             </label>
             <br />
             <InputNumber
-              inputStyle={{
-                borderRadius: "22px",
-              }}
               className="spacing"
               id="contributions"
               value={contribution}
@@ -110,8 +100,8 @@ export default function Home() {
             </div>
           </div>
           <div className="spacing2">
-            <label htmlFor="pay-term" className="spacing">
-              Plazo de Inversión
+            <label htmlFor="pay-term" className="spacing toplabel-styles">
+              PLAZO DE INVERSIÓN
             </label>
             <p className="spacing">{`${term} ${isPlural}`}</p>
             <Slider
@@ -124,12 +114,11 @@ export default function Home() {
             />
           </div>
           <div>
-            <label htmlFor="percent">Retorno anual promedio</label>
+            <label htmlFor="percent" className="toplabel-styles">
+              RETORNO ANUAL PROMEDIO
+            </label>
             <br />
             <InputNumber
-              inputStyle={{
-                borderRadius: "22px",
-              }}
               className="spacing"
               id="percent"
               suffix="%"
@@ -146,13 +135,18 @@ export default function Home() {
           />
         </form>
         <div className="result-graph">
-          <label htmlFor="return-of-investment" style={{ margin: "4.25%" }}>
-            Saldo potencial
-          </label>
-          <h2 style={{ marginBottom: "2.5%" }} id="return-of-investment">
-            RetoLno de InveLsion de Yonkeibel
-          </h2>
-          <div className="graph"></div>
+          <div className="top-container">
+            <label
+              htmlFor="return-of-investment"
+              className="toplabel-styles saldo-potencial"
+            >
+              SALDO POTENCIAL AL TÉRMINO:
+            </label>
+            <h2 className="final-result" id="return-of-investment">
+              US$ {"51,805"}
+            </h2>
+            <div className="graph"></div>
+          </div>
         </div>
       </section>
     </main>
