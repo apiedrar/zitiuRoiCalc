@@ -48,7 +48,7 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
-              className="spacing"
+              className="spacing contributions-specific-styles"
               id="contributions"
               value={contribution}
               onValueChange={(e) => setContribution(e.value)}
@@ -119,7 +119,7 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
-              className="spacing"
+              className="spacing roi-specific-styles"
               id="percent"
               suffix="%"
               value={percent}
