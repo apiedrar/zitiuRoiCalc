@@ -57,53 +57,61 @@ export default function Home() {
               locale="es"
             />
             <div className="radio">
-              <RadioButton
-                inputId="years"
-                name="select-frequency"
-                value="Anual"
-                onChange={(e) => setFrequency(e.value)}
-                checked={frequency === "Anual"}
-              />
-              <label htmlFor="years" className="radio-spacing">
-                Anual
-              </label>
-              <RadioButton
-                inputId="months"
-                name="select-frequency"
-                value="Mensual"
-                onChange={(e) => setFrequency(e.value)}
-                checked={frequency === "Mensual"}
-              />
-              <label htmlFor="months" className="radio-spacing">
-                Mensual
-              </label>
-              <RadioButton
-                inputId="weeks"
-                name="select-frequency"
-                value="Semanal"
-                onChange={(e) => setFrequency(e.value)}
-                checked={frequency === "Semanal"}
-              />
-              <label htmlFor="weeks" className="radio-spacing">
-                Semanal
-              </label>
-              <RadioButton
-                inputId="days"
-                name="select-frequency"
-                value="Diario"
-                onChange={(e) => setFrequency(e.value)}
-                checked={frequency === "Diario"}
-              />
-              <label htmlFor="days" className="radio-spacing">
-                Diario
-              </label>
+              <div className="individual-radio-containers anual-margin-right">
+                <RadioButton
+                  inputId="years"
+                  name="select-frequency"
+                  value="Anual"
+                  onChange={(e) => setFrequency(e.value)}
+                  checked={frequency === "Anual"}
+                />
+                <label htmlFor="years" className="radiolabel-styles">
+                  Anual
+                </label>
+              </div>
+              <div className="individual-radio-containers monthly-margin-left">
+                <RadioButton
+                  inputId="months"
+                  name="select-frequency"
+                  value="Mensual"
+                  onChange={(e) => setFrequency(e.value)}
+                  checked={frequency === "Mensual"}
+                />
+                <label htmlFor="months" className="radiolabel-styles">
+                  Mensual
+                </label>
+              </div>
+              <div className="individual-radio-containers weekly-margin-right">
+                <RadioButton
+                  inputId="weeks"
+                  name="select-frequency"
+                  value="Semanal"
+                  onChange={(e) => setFrequency(e.value)}
+                  checked={frequency === "Semanal"}
+                />
+                <label htmlFor="weeks" className="radiolabel-styles">
+                  Semanal
+                </label>
+              </div>
+              <div className="individual-radio-containers daily-margin-left">
+                <RadioButton
+                  inputId="days"
+                  name="select-frequency"
+                  value="Diario"
+                  onChange={(e) => setFrequency(e.value)}
+                  checked={frequency === "Diario"}
+                />
+                <label htmlFor="days" className="radiolabel-styles">
+                  Diario
+                </label>
+              </div>
             </div>
           </div>
           <div className="spacing2">
             <label htmlFor="pay-term" className="spacing toplabel-styles">
               PLAZO DE INVERSIÓN
             </label>
-            <p className="spacing">{`${term} ${isPlural}`}</p>
+            <p className="spacing term-styles">{`${term} ${isPlural}`}</p>
             <Slider
               name="pay-term"
               value={term}

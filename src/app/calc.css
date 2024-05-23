@@ -1,5 +1,5 @@
 body {
-  background: transparent;
+  background: rgb(243, 240, 230);
   min-height: 98.4vh;
 }
 
@@ -21,24 +21,33 @@ form {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3.2px;
+  color: rgb(43, 101, 60);
 }
 
 .p-inputnumber-input {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   padding-block: 6%;
   padding-inline: 12% 5px;
   letter-spacing: 0.75px;
-  border-radius: 22px;
+  border-radius: 30px;
+  border: none;
+  color: rgb(118, 118, 118);
+}
+
+.radiolabel-styles {
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 5%;
+}
+
+.p-radiobutton- {
+  outline-color: black;
 }
 
 .spacing {
   margin-top: 5%;
   margin-bottom: 10%;
-}
-
-.radio-spacing {
-  margin: 5%;
 }
 
 .spacing2 {
@@ -50,16 +59,50 @@ form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 300px;
+  height: 90px;
+  vertical-align: baseline;
+  justify-content: left;
+  text-align: left;
+}
+
+.individual-radio-containers {
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 200px;
+}
+
+.anual-margin-right {
+  margin-right: 35px;
+}
+
+.monthly-margin-left {
+  margin-left: 35px;
+}
+
+.weekly-margin-right {
+  margin-right: 18px;
+}
+
+.daily-margin-left {
+  margin-left: 18px;
+}
+
+.term-styles {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  color: rgb(118, 118, 118);
 }
 
 .bouton {
-  width: 15rem;
-  background-color: rgb(47, 40, 224);
+  height: 4rem;
+  width: 17rem;
+  background-color: rgb(116, 201, 71);
   color: rgb(255, 255, 255);
-  border-radius: 22px;
+  border: none;
+  border-radius: 30px;
   padding: 0.75em;
 }
 
@@ -105,7 +148,8 @@ form {
   }
   form {
     align-items: center;
-    padding: none;
+    padding-left: none;
+    margin-top: none;
   }
   .contributions-specific-styles {
     padding-left: 1%;
