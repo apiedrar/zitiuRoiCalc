@@ -25,10 +25,7 @@ export default function Home() {
       <section className="roi-calculus">
         <form onSubmit={handleSubmit}>
           <div>
-            <label
-              htmlFor="initial-deposit"
-              className="spacing toplabel-styles"
-            >
+            <label htmlFor="initial-deposit" className="spacing toplabel">
               DEPÓSITO INICIAL
             </label>
             <br />
@@ -43,12 +40,12 @@ export default function Home() {
             />
           </div>
           <div>
-            <label htmlFor="contributions" className="spacing toplabel-styles">
+            <label htmlFor="contributions" className="spacing toplabel">
               APORTES
             </label>
             <br />
             <InputNumber
-              className="spacing contributions-specific-styles"
+              className="spacing contributions-specific"
               id="contributions"
               value={contribution}
               onValueChange={(e) => setContribution(e.value)}
@@ -65,7 +62,7 @@ export default function Home() {
                   onChange={(e) => setFrequency(e.value)}
                   checked={frequency === "Anual"}
                 />
-                <label htmlFor="years" className="radiolabel-styles">
+                <label htmlFor="years" className="radiolabel">
                   Anual
                 </label>
               </div>
@@ -77,7 +74,7 @@ export default function Home() {
                   onChange={(e) => setFrequency(e.value)}
                   checked={frequency === "Mensual"}
                 />
-                <label htmlFor="months" className="radiolabel-styles">
+                <label htmlFor="months" className="radiolabel">
                   Mensual
                 </label>
               </div>
@@ -89,7 +86,7 @@ export default function Home() {
                   onChange={(e) => setFrequency(e.value)}
                   checked={frequency === "Semanal"}
                 />
-                <label htmlFor="weeks" className="radiolabel-styles">
+                <label htmlFor="weeks" className="radiolabel">
                   Semanal
                 </label>
               </div>
@@ -101,33 +98,33 @@ export default function Home() {
                   onChange={(e) => setFrequency(e.value)}
                   checked={frequency === "Diario"}
                 />
-                <label htmlFor="days" className="radiolabel-styles">
+                <label htmlFor="days" className="radiolabel">
                   Diario
                 </label>
               </div>
             </div>
           </div>
           <div className="spacing2">
-            <label htmlFor="pay-term" className="spacing toplabel-styles">
+            <label htmlFor="pay-term" className="spacing toplabel">
               PLAZO DE INVERSIÓN
             </label>
-            <p className="spacing term-styles">{`${term} ${isPlural}`}</p>
+            <p className="spacing term">{`${term} ${isPlural}`}</p>
             <Slider
               name="pay-term"
               value={term}
               onChange={(e) => setTerm(e.value)}
-              className="p-slider p-slider-handle w-13rem spacing3"
+              className="p-slider p-slider-handle w-18rem spacing3"
               min={1}
               max={40}
             />
           </div>
           <div>
-            <label htmlFor="percent" className="toplabel-styles">
+            <label htmlFor="percent" className="toplabel">
               RETORNO ANUAL PROMEDIO
             </label>
             <br />
             <InputNumber
-              className="spacing roi-specific-styles"
+              className="spacing roi-specific"
               id="percent"
               suffix="%"
               value={percent}
@@ -146,7 +143,7 @@ export default function Home() {
           <div className="top-container">
             <label
               htmlFor="return-of-investment"
-              className="toplabel-styles saldo-potencial"
+              className="toplabel saldo-potencial"
             >
               SALDO POTENCIAL AL TÉRMINO:
             </label>
