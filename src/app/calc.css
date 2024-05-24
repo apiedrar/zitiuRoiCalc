@@ -1,8 +1,3 @@
-body {
-  background: rgb(243, 240, 230);
-  min-height: 98.4vh;
-}
-
 .roi-calculus {
   display: grid;
   grid-template-columns: 33.5% 66.5%;
@@ -41,18 +36,9 @@ form {
   padding-left: 5%;
 }
 
-.p-radiobutton- {
-  outline-color: black;
-}
-
 .spacing {
   margin-top: 5%;
   margin-bottom: 10%;
-}
-
-.spacing2 {
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .radio {
@@ -89,11 +75,29 @@ form {
   margin-left: 18px;
 }
 
+.spacing2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .term {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 550;
   letter-spacing: 0.75px;
   color: rgb(118, 118, 118);
+}
+
+.p-slider {
+  background-color: white;
+}
+
+.p-slider-range {
+  border-radius: 22px;
+  background-color: rgb(116, 201, 71);
+}
+
+.p-slider-handle {
+  border-color: rgb(43, 101, 60);
 }
 
 .bouton {
@@ -121,16 +125,19 @@ form {
   align-items: center;
 }
 
-.saldo-potencial {
+.potential-balance {
   margin-top: 3.25%;
 }
 
 .final-result {
+  margin-top: 1%;
+  margin-bottom: 3%;
   font-size: 78px;
   font-weight: 600;
   border-bottom-style: dashed;
   border-bottom-width: 3px;
   line-height: 103px;
+  color: rgb(116, 201, 71);
 }
 
 .graph {

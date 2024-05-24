@@ -7,3 +7,9 @@ html {
     font-variation-settings: "slnt" 0;
   }
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(243, 240, 230);
+  min-height: 98.4vh;
+}

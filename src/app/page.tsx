@@ -16,6 +16,12 @@ export default function Home() {
   const [term, setTerm] = useState(5);
   const [percent, setPercent] = useState(15);
   const isPlural = term > 1 ? "años" : "año";
+  const usDollar = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+  let roi = 51805;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>
     e.preventDefault();
@@ -113,7 +119,7 @@ export default function Home() {
               name="pay-term"
               value={term}
               onChange={(e) => setTerm(e.value)}
-              className="p-slider p-slider-handle w-18rem spacing3"
+              className="p-slider p-slider-handle w-20rem spacing3"
               min={1}
               max={40}
             />
@@ -143,13 +149,13 @@ export default function Home() {
           <div className="top-container">
             <label
               htmlFor="return-of-investment"
-              className="toplabel saldo-potencial"
+              className="toplabel potential-balance"
             >
               SALDO POTENCIAL AL TÉRMINO:
             </label>
-            <h2 className="final-result" id="return-of-investment">
-              US$ {"51,805"}
-            </h2>
+            <div className="final-result" id="return-of-investment">
+              US{usDollar.format(roi)}
+            </div>
             <div className="graph"></div>
           </div>
         </div>
