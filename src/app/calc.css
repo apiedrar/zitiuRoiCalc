@@ -52,6 +52,15 @@ form {
   text-align: left;
 }
 
+.p-radiobutton-box {
+  background-color: transparent;
+  border-color: black;
+}
+
+.p-radiobutton-icon {
+  background-color: transparent;
+}
+
 .individual-radio-containers {
   display: flex;
   flex-direction: row;
