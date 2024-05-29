@@ -30,7 +30,7 @@ export default function Home() {
     <main>
       <section className="roi-calculus">
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="bottom-spacing">
             <label htmlFor="initial-deposit" className="spacing toplabel">
               DEPÓSITO INICIAL
             </label>
@@ -110,7 +110,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="spacing2">
+          <div className="slider-spacing">
             <label htmlFor="pay-term" className="spacing toplabel">
               PLAZO DE INVERSIÓN
             </label>
@@ -119,7 +119,7 @@ export default function Home() {
               name="pay-term"
               value={term}
               onChange={(e) => setTerm(e.value)}
-              className="p-slider p-slider-handle w-20rem spacing3"
+              className="p-slider p-slider-handle w-300px spacing3"
               min={1}
               max={40}
             />
@@ -140,10 +140,7 @@ export default function Home() {
               max={40}
             />
           </div>
-          <Button
-            className="bouton spacing"
-            label="Calcular mis rendimientos"
-          />
+          <Button className="bouton" label="Calcular mis rendimientos" />
         </form>
         <div className="result-graph">
           <div className="top-container">

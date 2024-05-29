@@ -1,15 +1,22 @@
 .roi-calculus {
-  display: grid;
-  grid-template-columns: 33.5% 66.5%;
+  width: 1200px;
+  height: 754px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 55px;
+  margin-right: 55px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: last baseline;
-  padding-left: 5%;
-  margin-top: 12%;
+  width: 320px;
+  margin-top: 17.5%;
+  margin-right: 50px;
 }
 
 .toplabel {
@@ -22,12 +29,17 @@ form {
 .p-inputnumber-input {
   font-size: 20px;
   font-weight: 600;
-  padding-block: 6%;
-  padding-inline: 12% 5px;
+  padding-block: 6.65%;
+  padding-inline: 12% 0%;
+  width: 240px;
   letter-spacing: 0.75px;
   border-radius: 30px;
   border: none;
   color: rgb(118, 118, 118);
+}
+
+.p-inputnumber-input:valid {
+  color: black;
 }
 
 .radiolabel {
@@ -38,7 +50,7 @@ form {
 
 .spacing {
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .radio {
@@ -50,11 +62,12 @@ form {
   vertical-align: baseline;
   justify-content: left;
   text-align: left;
+  margin-bottom: 6%;
 }
 
 .p-radiobutton-box {
   background-color: transparent;
-  border-color: black;
+  border: 1px solid black;
 }
 
 .p-radiobutton-icon {
@@ -81,12 +94,16 @@ form {
 }
 
 .daily-margin-left {
-  margin-left: 18px;
+  margin-left: 21px;
 }
 
-.spacing2 {
+.bottom-spacing {
+  margin-bottom: 4%;
+}
+
+.slider-spacing {
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 18%;
 }
 
 .term {
@@ -111,12 +128,14 @@ form {
 
 .bouton {
   height: 4rem;
-  width: 17rem;
+  width: 15rem;
   background-color: rgb(116, 201, 71);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 30px;
   padding: 0.75em;
+  margin-top: 7%;
+  margin-bottom: 5%;
 }
 
 .result-graph {
@@ -124,7 +143,7 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: first baseline;
-  padding-left: 10%;
+  margin-left: 50px;
 }
 
 .top-container {
@@ -158,8 +177,6 @@ form {
 
 @media (max-width: 1344px) {
   .roi-calculus {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
   form {
