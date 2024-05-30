@@ -1,7 +1,15 @@
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
 .roi-calculus {
   width: 1200px;
   height: 754px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-left: 55px;
@@ -176,24 +184,22 @@ form {
 }
 
 @media (max-width: 1344px) {
+  main {
+    flex-direction: column;
+  }
   .roi-calculus {
-    justify-content: center;
+    flex-direction: column;
+    width: 58.5%;
+    justify-content: last baseline;
   }
   form {
     align-items: center;
-    padding-left: none;
-    margin-top: none;
-  }
-  .contributions-specific {
-    padding-left: 1%;
-  }
-  .roi-specific {
-    padding-left: 17%;
   }
   .top-container {
     justify-content: center;
   }
   .result-graph {
+    max-width: 80%;
     align-items: center;
   }
   .graph {
