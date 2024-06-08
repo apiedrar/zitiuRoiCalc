@@ -189,17 +189,26 @@ form {
   }
   .roi-calculus {
     flex-direction: column;
-    width: 58.5%;
+    width: 100%;
     justify-content: last baseline;
+    align-items: center;
   }
   form {
     align-items: center;
   }
-  .top-container {
-    justify-content: center;
+  .p-inputnumber {
+    padding-block: none;
+    padding-inline: none;
+  }
+  .bouton {
+    padding: none;
   }
   .result-graph {
-    max-width: 80%;
+    align-items: center;
+    margin-left: none;
+  }
+  .top-container {
+    max-width: 95%;
     align-items: center;
   }
   .graph {
