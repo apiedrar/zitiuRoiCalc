@@ -193,13 +193,17 @@ form {
   }
   .roi-calculus {
     flex-direction: column;
-    width: 80%;
+    width: 70vw;
     justify-content: last baseline;
     align-items: center;
   }
   form {
     align-items: center;
-    width: 80%;
+    width: 80vw;
+    margin: 17.5% 50%;
+  }
+  .radio {
+    align-self: center;
   }
   .bouton {
     padding: none;
@@ -207,13 +211,25 @@ form {
   .result-graph {
     align-items: center;
     margin-left: none;
+    margin-right: 15vw;
   }
   .top-container {
-    width: 80%;
+    width: 80vw;
     align-items: center;
   }
+  .final-result {
+    font-size: 2.8em;
+    line-height: 1.2em;
+  }
   .graph {
-    width: 90%;
-    height: 44%;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .result-graph {
+    align-items: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
   }
 }
