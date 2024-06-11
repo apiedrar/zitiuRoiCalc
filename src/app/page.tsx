@@ -10,11 +10,11 @@ import "primeflex/primeflex.css";
 import "./calc.css";
 
 export default function Home() {
-  const [initialDeposit, setInitialDeposit] = useState(1200);
-  const [contribution, setContribution] = useState(200);
+  const [initialDeposit, setInitialDeposit] = useState();
+  const [contribution, setContribution] = useState();
   const [frequency, setFrequency] = useState<Frequency>("Mensual");
   const [term, setTerm] = useState(5);
-  const [percent, setPercent] = useState(15);
+  const [percent, setPercent] = useState();
   const isPlural = term > 1 ? "años" : "año";
   const usDollar = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -30,12 +30,13 @@ export default function Home() {
     <main>
       <section className="roi-calculus">
         <form onSubmit={handleSubmit}>
-          <div className="bottom-spacing">
+          <div className="bottom-spacing initial-deposit">
             <label htmlFor="initial-deposit" className="spacing toplabel">
               DEPÓSITO INICIAL
             </label>
             <br />
             <InputNumber
+              placeholder="US$ 1.200"
               className="spacing"
               id="initial-deposit"
               value={initialDeposit}
@@ -51,6 +52,7 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
+              placeholder="US$ 200"
               className="spacing contributions-specific"
               id="contributions"
               value={contribution}
@@ -110,7 +112,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="slider-spacing">
+          <div className="slider-spacing term-of-investment">
             <label htmlFor="pay-term" className="spacing toplabel">
               PLAZO DE INVERSIÓN
             </label>
@@ -130,6 +132,7 @@ export default function Home() {
             </label>
             <br />
             <InputNumber
+              placeholder="15%"
               className="spacing roi-specific"
               id="percent"
               suffix="%"

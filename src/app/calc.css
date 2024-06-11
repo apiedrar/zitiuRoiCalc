@@ -73,6 +73,10 @@ form {
   margin-bottom: 6%;
 }
 
+.p-radiobutton-input:checked + .p-radiobutton-box {
+  border: 6px solid #74c947;
+}
+
 .p-radiobutton-box {
   background-color: transparent;
   border: 1px solid black;
@@ -189,16 +193,13 @@ form {
   }
   .roi-calculus {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     justify-content: last baseline;
     align-items: center;
   }
   form {
     align-items: center;
-  }
-  .p-inputnumber {
-    padding-block: none;
-    padding-inline: none;
+    width: 80%;
   }
   .bouton {
     padding: none;
@@ -208,11 +209,11 @@ form {
     margin-left: none;
   }
   .top-container {
-    max-width: 95%;
+    width: 80%;
     align-items: center;
   }
   .graph {
-    max-width: 90%;
-    max-height: 44%;
+    width: 90%;
+    height: 44%;
   }
 }
