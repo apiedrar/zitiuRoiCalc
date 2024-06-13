@@ -1,7 +1,3 @@
-*, (not).graph {
-  box-sizing: border-box;
-}
-
 main {
   display: flex;
   flex-direction: row;
@@ -10,58 +6,54 @@ main {
 }
 
 .roi-calculus {
-  width: 100%;
-  max-width: 1440px;
+  width: 1200px;
+  height: 754px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 4.17%;
+  margin-left: 55px;
+  margin-right: 55px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 22.22%;
-  max-width: 384px;
+  width: 320px;
   margin-top: 17.5%;
-  margin-left: 1.5%;
-  margin-right: 3.33%;
+  margin-right: 50px;
 }
 
 .toplabel {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3.2px;
-  color: #2b653c;
+  color: rgb(43, 101, 60);
 }
 
 .p-inputnumber-input {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   padding-block: 6.65%;
   padding-inline: 12% 0%;
-  max-width: 240px;
+  width: 240px;
   letter-spacing: 0.75px;
   border-radius: 30px;
   border: none;
-  color: #767676;
+  color: rgb(118, 118, 118);
 }
 
 .p-inputnumber-input:valid {
-  color: #000000;
-}
-
-.contributions-specific {
-  margin-bottom: 8%;
+  color: black;
 }
 
 .radiolabel {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-left: 20%;
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 5%;
 }
 
 .spacing {
@@ -70,17 +62,15 @@ form {
 }
 
 .radio {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  width: 93.75%;
-  height: 28.13%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 90px;
   vertical-align: baseline;
-  justify-content: space-between;
+  justify-content: left;
+  text-align: left;
   margin-bottom: 6%;
-}
-.p-radiobutton {
-  box-sizing: border-box;
 }
 
 .p-radiobutton-input:checked + .p-radiobutton-box {
@@ -89,7 +79,7 @@ form {
 
 .p-radiobutton-box {
   background-color: transparent;
-  border: 1px solid #000000;
+  border: 1px solid black;
 }
 
 .p-radiobutton-icon {
@@ -97,13 +87,26 @@ form {
 }
 
 .individual-radio-containers {
-  box-sizing: border-box;
-  max-width: 50%;
-  max-height: 50%;
   display: flex;
-  justify-content: space-between;
-  padding: 0 7.5%;
-  margin: 3% 0;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.anual-margin-right {
+  margin-right: 35px;
+}
+
+.monthly-margin-left {
+  margin-left: 35px;
+}
+
+.weekly-margin-right {
+  margin-right: 18px;
+}
+
+.daily-margin-left {
+  margin-left: 21px;
 }
 
 .bottom-spacing {
@@ -119,29 +122,27 @@ form {
   font-size: 22px;
   font-weight: 550;
   letter-spacing: 0.75px;
-  color: #767676;
+  color: rgb(118, 118, 118);
 }
 
 .p-slider {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .p-slider-range {
   border-radius: 22px;
-  background-color: #74c947;
+  background-color: rgb(116, 201, 71);
 }
 
 .p-slider-handle {
-  border-color: #2b653c;
+  border-color: rgb(43, 101, 60);
 }
 
 .bouton {
-  height: 56px;
-  width: 78.93%;
-  max-width: 252.58px;
-  background-color: #74c947;
-  color: #ffffff;
-  font-size: 1rem;
+  height: 4rem;
+  width: 15rem;
+  background-color: rgb(116, 201, 71);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 30px;
   padding: 0.75em;
@@ -150,13 +151,11 @@ form {
 }
 
 .result-graph {
-  width: 55.56%;
-  max-width: 960px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: first baseline;
-  margin-left: 3.33%;
+  margin-left: 50px;
 }
 
 .top-container {
@@ -168,51 +167,54 @@ form {
 
 .potential-balance {
   margin-top: 3.25%;
-  margin-bottom: 4%;
 }
 
 .final-result {
-  font-size: 4.88em;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  font-size: 78px;
   font-weight: 600;
   border-bottom-style: dashed;
   border-bottom-width: 3px;
-  line-height: 1.25em;
-  color: #74c947;
+  line-height: 103px;
+  color: rgb(116, 201, 71);
 }
 
 .graph {
-  max-width: 800px;
-  max-height: 432px;
+  width: 800px;
+  height: 432px;
   border-radius: 22px;
-  background-color: #2b653c;
+  background-color: rgb(43, 101, 60);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1344px) {
   main {
     flex-direction: column;
   }
   .roi-calculus {
     flex-direction: column;
+    width: 70vw;
     justify-content: last baseline;
     align-items: center;
   }
   form {
     align-items: center;
+    width: 80vw;
+    margin: 17.5% 50%;
   }
   .radio {
     align-self: center;
   }
-  .radiolabel {
-    font-size: 0.8rem;
-  }
   .bouton {
-    width: 208px;
     padding: none;
   }
   .result-graph {
     align-items: center;
+    margin-left: none;
+    margin-right: 15vw;
   }
   .top-container {
+    width: 80vw;
     align-items: center;
   }
   .final-result {
@@ -220,8 +222,14 @@ form {
     line-height: 1.2em;
   }
   .graph {
-    max-width: min-content;
-    border-radius: 22px;
-    background-color: #2b653c;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .result-graph {
+    align-items: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
   }
 }

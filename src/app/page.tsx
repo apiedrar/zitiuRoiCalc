@@ -30,7 +30,7 @@ export default function Home() {
     <main>
       <section className="roi-calculus">
         <form onSubmit={handleSubmit}>
-          <div className="bottom-spacing alignment-correction">
+          <div className="bottom-spacing initial-deposit">
             <label htmlFor="initial-deposit" className="spacing toplabel">
               DEPÓSITO INICIAL
             </label>
@@ -62,7 +62,7 @@ export default function Home() {
               locale="es"
             />
             <div className="radio">
-              <div className="individual-radio-containers">
+              <div className="individual-radio-containers anual-margin-right">
                 <RadioButton
                   inputId="years"
                   name="select-frequency"
@@ -74,7 +74,7 @@ export default function Home() {
                   Anual
                 </label>
               </div>
-              <div className="individual-radio-containers">
+              <div className="individual-radio-containers monthly-margin-left">
                 <RadioButton
                   inputId="months"
                   name="select-frequency"
@@ -86,7 +86,7 @@ export default function Home() {
                   Mensual
                 </label>
               </div>
-              <div className="individual-radio-containers">
+              <div className="individual-radio-containers weekly-margin-right">
                 <RadioButton
                   inputId="weeks"
                   name="select-frequency"
@@ -98,7 +98,7 @@ export default function Home() {
                   Semanal
                 </label>
               </div>
-              <div className="individual-radio-containers">
+              <div className="individual-radio-containers daily-margin-left">
                 <RadioButton
                   inputId="days"
                   name="select-frequency"
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="slider-spacing alignment-correction">
+          <div className="slider-spacing term-of-investment">
             <label htmlFor="pay-term" className="spacing toplabel">
               PLAZO DE INVERSIÓN
             </label>
